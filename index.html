@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="generator-container">
+      <h1>🔐 Password Generator</h1>
+
+      <div class="settings-section">
+        <div class="form-group">
+          <label for="passwordLength">Password Length</label>
+          <select id="passwordLength">
+            <option value="8" selected>8 characters</option>
+            <option value="12">12 characters</option>
+            <option value="16">16 characters</option>
+            <option value="20">20 characters</option>
+          </select>
+        </div>
+
+        <div class="checkbox-group">
+          <h3>Include Characters:</h3>
+          <div class="checkbox-item">
+            <input type="checkbox" id="includeUppercase" />
+            <label for="includeUppercase">Uppercase Letters (A-Z)</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="includeLowercase" />
+            <label for="includeLowercase">Lowercase Letters (a-z)</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="includeNumbers" />
+            <label for="includeNumbers">Numbers (0-9)</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="includeSpecial" />
+            <label for="includeSpecial">Special Characters (!@#$%^&*)</label>
+          </div>
+        </div>
+
+        <button id="generateBtn">Generate Password</button>
+      </div>
+
+      <div class="result-section">
+        <div class="password-display">
+          <input
+            type="text"
+            id="generatedPassword"
+            placeholder="Generated password..."
+            readonly
+          />
+          <button id="copyBtn">Copy</button>
+        </div>
+
+        <div class="strength-indicator">
+          <span>Password Strength: </span>
+          <span id="strengthLevel">-</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
